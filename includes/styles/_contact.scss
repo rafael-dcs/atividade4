@@ -1,0 +1,53 @@
+#contactMsg{
+    article{
+        p{
+            text-align: justify;
+        }
+    }
+}
+
+.contactForm{
+    width: 80%;
+    margin: 0 auto;
+    @include button;
+    ul{
+        list-style-type: none;
+        padding-top: 6em;
+        li{
+            color: $cinzaClaro;
+            vertical-align: middle;
+            padding: 0.2em;
+        }
+        h6{
+            color: black;
+            margin-bottom: 0;
+            padding-top: 1em;
+        }
+    }
+}
+
+@media (max-width: $tablet){
+    .contactForm{
+        ul{
+            padding-inline-start: 0;
+        }
+    }
+}
+
+@media (max-width: $mobileL){
+    #contactMsg{
+        h2{
+            font-size: 25px;
+        }
+        p{
+            padding-bottom: 2em;
+            margin-bottom: 1em;
+            border-bottom: solid 1px #333;
+        }
+    }
+    .contactForm{
+        ul{
+            padding-top: 2em;
+        }
+    }
+}

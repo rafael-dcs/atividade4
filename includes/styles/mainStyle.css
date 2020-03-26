@@ -1,0 +1,376 @@
+#contactMsg article p {
+  text-align: justify; }
+
+.contactForm {
+  width: 80%;
+  margin: 0 auto; }
+  .contactForm .btn-default {
+    color: #fff;
+    background-color: #333; }
+    .contactForm .btn-default:hover {
+      color: #333;
+      background-color: #ccc; }
+  .contactForm ul {
+    list-style-type: none;
+    padding-top: 6em; }
+    .contactForm ul li {
+      color: #999;
+      vertical-align: middle;
+      padding: 0.2em; }
+    .contactForm ul h6 {
+      color: black;
+      margin-bottom: 0;
+      padding-top: 1em; }
+
+@media (max-width: 768px) {
+  .contactForm ul {
+    padding-inline-start: 0; } }
+@media (max-width: 530px) {
+  #contactMsg h2 {
+    font-size: 25px; }
+  #contactMsg p {
+    padding-bottom: 2em;
+    margin-bottom: 1em;
+    border-bottom: solid 1px #333; }
+
+  .contactForm ul {
+    padding-top: 2em; } }
+.about * {
+  margin: 0 auto; }
+.about h3 {
+  font-size: large;
+  text-transform: uppercase;
+  padding-bottom: 1em; }
+
+.section #aboutArticle p {
+  width: 60%;
+  margin: 0 auto;
+  color: #777; }
+.section #aboutTxt p {
+  font-size: medium;
+  text-align: justify; }
+.section #aboutTxt .btn-default {
+  color: #fff;
+  background-color: #333; }
+  .section #aboutTxt .btn-default:hover {
+    color: #333;
+    background-color: #ccc; }
+.section #aboutTxt button {
+  margin-top: 2em; }
+
+@media (max-width: 768px) {
+  .section #aboutArticle p {
+    width: 80%; } }
+@media (max-width: 530px) {
+  .section #aboutArticle p {
+    width: 100%;
+    text-align: justify; } }
+nav {
+  position: relative; }
+
+.pagination {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%); }
+  .pagination li a {
+    background-color: #666;
+    color: white; }
+    .pagination li a:hover {
+      background-color: white;
+      color: #333; }
+  .pagination .active2 {
+    background-color: #333;
+    border-color: #333;
+    color: white; }
+    .pagination .active2:hover {
+      background-color: #333;
+      border-color: #333;
+      color: white; }
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifd; }
+  body a {
+    color: #333; }
+    body a:hover {
+      color: #999; }
+
+.menu {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2em 5em;
+  background-color: #f1f1f1; }
+  .menu div {
+    padding: 0 3em; }
+    .menu div h1 {
+      font-size: small;
+      font-weight: 700; }
+  .menu nav {
+    padding: 0 2em; }
+    .menu nav ul {
+      float: right;
+      margin-top: 17px; }
+      .menu nav ul li {
+        display: inline;
+        padding: 0 1em; }
+        .menu nav ul li img {
+          width: 20px; }
+    .menu nav .menuButton {
+      position: relative;
+      display: none;
+      width: 100px;
+      left: 70%;
+      bottom: 5em; }
+
+.row {
+  padding: 2em 0; }
+
+#banner {
+  position: relative;
+  padding-top: 10em;
+  background-color: #f1f1f1;
+  width: 100%;
+  margin: 0; }
+  #banner .col-md-4 {
+    padding-left: 0; }
+  #banner #bag {
+    width: 37em;
+    position: absolute;
+    bottom: 5em; }
+  #banner #focus {
+    border-radius: 50%;
+    background-color: white;
+    width: 30em;
+    height: 30em;
+    margin-left: 12em;
+    margin-bottom: 1em; }
+
+.view {
+  padding-top: 3em;
+  margin-left: 25%; }
+  .view h2 {
+    font-size: 38pt;
+    font-weight: 700; }
+  .view p {
+    width: 65%;
+    padding-bottom: 3em; }
+  .view h3 {
+    font-weight: 700;
+    font-size: medium; }
+
+.section {
+  padding-top: 5em;
+  margin: 0 auto;
+  width: 80%; }
+  .section p {
+    text-align: center; }
+  .section h2 {
+    text-align: center;
+    color: black; }
+  .section img {
+    padding-bottom: 2em; }
+  .section .shop:hover .overlay {
+    opacity: 1; }
+    .section .shop:hover .overlay a {
+      color: white; }
+
+.delivery {
+  padding-top: 4em;
+  margin: 0 auto; }
+  .delivery .col {
+    padding: 0; }
+  .delivery figure {
+    position: relative; }
+    .delivery figure img {
+      width: 54px;
+      margin-right: 1em;
+      vertical-align: text-bottom; }
+    .delivery figure figcaption {
+      width: 70%;
+      display: inline-block; }
+      .delivery figure figcaption p {
+        text-align: left;
+        color: #999; }
+      .delivery figure figcaption h3 {
+        font-weight: 700;
+        font-size: medium; }
+
+.products {
+  width: 100%;
+  margin: 0 auto; }
+  .products figure {
+    padding-top: 2em; }
+    .products figure img {
+      width: 100%; }
+    .products figure figcaption {
+      position: relative;
+      bottom: 1em; }
+
+.overlay {
+  position: absolute;
+  bottom: 1.7em;
+  right: 1px;
+  background: black;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 8%;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+
+.preco {
+  position: absolute;
+  text-align: right;
+  background-color: white;
+  width: 4.2em;
+  right: 1px;
+  z-index: 1; }
+
+.joinForm {
+  position: relative;
+  padding-top: 3em; }
+  .joinForm form input {
+    width: 18em;
+    margin-right: 1em;
+    background-color: #d3d3d3;
+    border-style: double;
+    border-color: #d3d3d3;
+    border-width: 5px;
+    height: 3em; }
+  .joinForm form button {
+    width: 70px;
+    background-color: black;
+    color: white;
+    border: none;
+    height: 3em; }
+
+footer {
+  margin-top: 5em;
+  padding-top: 3em;
+  background-color: black;
+  color: white; }
+  footer .footer {
+    width: 80%;
+    margin: 0 auto; }
+    footer .footer .col-xs-3 {
+      margin-right: 4em;
+      position: relative;
+      bottom: 2em; }
+      footer .footer .col-xs-3 h3 {
+        font-weight: 700;
+        font-size: medium; }
+    footer .footer a {
+      color: white; }
+    footer .footer p {
+      padding-top: 3.2em;
+      font-size: 9pt; }
+    footer .footer ul {
+      padding-top: 2em;
+      list-style-type: none;
+      padding-inline-start: 0; }
+      footer .footer ul a, footer .footer ul li {
+        margin: 1em 0;
+        font-size: 9pt; }
+      footer .footer ul img {
+        width: 10px; }
+    footer .footer .copyright ul {
+      margin: 0; }
+      footer .footer .copyright ul li {
+        display: inline; }
+        footer .footer .copyright ul li a {
+          margin: 0 3em;
+          color: #333; }
+        footer .footer .copyright ul li .icons {
+          margin: 0 1em; }
+
+@media (max-width: 1024px) {
+  footer .footer .copyright ul li a {
+    margin: 0 1.5em; } }
+@media (max-width: 964px) {
+  #banner figure {
+    display: none; }
+  #banner article {
+    margin-left: 0; }
+    #banner article * {
+      text-align: center; }
+    #banner article p {
+      margin: 0 auto; }
+
+  .delivery {
+    width: 100%; }
+    .delivery img {
+      display: none; }
+    .delivery figure figcaption {
+      width: 100%; }
+      .delivery figure figcaption h3 {
+        text-align: center; }
+      .delivery figure figcaption p {
+        text-align: center; } }
+@media (max-width: 768px) {
+  #banner {
+    padding-top: 5em; }
+
+  .products figure figcaption .preco {
+    font-size: 7pt; }
+  .products figure figcaption a {
+    font-size: 7pt;
+    vertical-align: top; }
+  .products figure figcaption .overlay {
+    bottom: 3.6em;
+    opacity: 1; }
+
+  .joinForm form input {
+    width: 14em; }
+
+  footer .footer .col-xs-3 {
+    width: 100%; }
+  footer .footer .col-xs-2 {
+    width: 25%; } }
+@media (max-width: 530px) {
+  .menu {
+    height: 10em; }
+    .menu div h1 {
+      font-size: large; }
+    .menu nav {
+      width: 100%;
+      padding: 0; }
+      .menu nav .menuButton {
+        display: flex; }
+      .menu nav .menuList {
+        width: 100%;
+        display: none;
+        position: relative;
+        bottom: 5em;
+        background-color: #f1f1f1;
+        padding-left: 0;
+        z-index: 1; }
+        .menu nav .menuList li {
+          display: list-item;
+          list-style: none;
+          text-align: center;
+          padding: 0.5em 0;
+          border-bottom: solid 1px #333; }
+          .menu nav .menuList li:hover {
+            background-color: #333; }
+
+  #banner {
+    padding-top: 0; }
+    #banner .view {
+      padding-top: 0; }
+
+  .products figure {
+    width: 50%; }
+
+  .joinForm form input {
+    width: 12em; }
+
+  footer .footer .col-xs-2 {
+    width: 50%; }
+  footer .footer .copyright ul li a {
+    margin: 0 0.5em; } }
+
+/*# sourceMappingURL=mainStyle.css.map */

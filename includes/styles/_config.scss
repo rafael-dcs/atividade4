@@ -1,0 +1,31 @@
+$cinzaEscuro: #333;
+$cinzaMuitoClaro: #d3d3d3;
+$cinzaClaro: #999;
+$notebook: 1024px;
+$smallScreen: 964px;
+$tablet: 768px;
+$mobileL: 530px;
+$mobileM: 375px;
+$mobileS: 320px;
+
+@mixin weightDefault{
+    font-weight: 700;
+}
+
+@mixin styledLink {
+    h3{
+        @include weightDefault;
+        font-size: medium;
+    }
+}
+
+@mixin button {
+    .btn-default{
+        color: #fff;
+        background-color: #333;
+        &:hover{
+            color: #333;
+            background-color: #ccc;
+        }
+    }
+}
