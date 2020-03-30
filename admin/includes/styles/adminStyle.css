@@ -1,0 +1,21 @@
+#loginForm {
+  background-color: white;
+  width: 425px;
+  margin: 8em auto;
+  border: solid 1px #ccc;
+  border-radius: 7px; }
+  #loginForm form {
+    padding: 1em 2em 4em 2em; }
+    #loginForm form h2 {
+      padding-bottom: 1em; }
+    #loginForm form a {
+      float: right; }
+    #loginForm form #login {
+      width: 100%;
+      margin-top: 2em; }
+
+body {
+  background-color: #eee;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifd; }
+
+/*# sourceMappingURL=adminStyle.css.map */

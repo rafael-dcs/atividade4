@@ -1,0 +1,21 @@
+#loginForm{
+    background-color: white;
+    width: 425px;
+    margin: 8em auto;
+    border: solid 1px #ccc;
+    border-radius: 7px;
+    form{
+        padding: 1em 2em 4em 2em;
+        h2{
+            // padding-left: 1em;
+            padding-bottom: 1em;
+        }
+        a{
+            float: right;
+        }
+        #login{
+            width: 100%;
+            margin-top: 2em;
+        } 
+    }
+}
