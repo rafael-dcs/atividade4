@@ -17,6 +17,8 @@
       color: #999;
       vertical-align: middle;
       padding: 0.2em; }
+      .contactForm ul li a {
+        color: #999; }
     .contactForm ul h6 {
       color: black;
       margin-bottom: 0;
