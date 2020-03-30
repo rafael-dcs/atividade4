@@ -9,15 +9,15 @@
 </head>
 <body>
     <section id="loginForm">
-        <form action="" method="POST">
+        <form action="index.php" method="POST">
         <h2>SIGN IN</h2>
             <div class="form-group">
                 <label for="user">Username</label>
-                <input type="text" name="user" class="form-control" placeholder="Username">
+                <input type="text" name="user" class="form-control" placeholder="Username" required>
             </div>
             <div class="form-group">
                 <label for="pass">Password</label>
-                <input type="text" name="pass" class="form-control" placeholder="Password">
+                <input type="password" name="pass" class="form-control" placeholder="Password" required>
             </div>
             <div>
                 <input type="checkbox" name="remember" checked>
@@ -25,7 +25,7 @@
                 <a href="" title="Change password">Forgot password?</a>
             </div>
             <div>
-                <input type="submit" id="login" class="btn btn-success" value="LOGIN">
+                <input type="submit" id="login" class="btn btn-success" value="LOGIN" name="login">
             </div>
         </form>
     </section>
