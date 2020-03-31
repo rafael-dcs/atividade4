@@ -10,6 +10,14 @@
 <body>
     <header>
         <h1><a title="Home" href="http://localhost/projeto4/">SHOPPING</a></h1>
+        <section>
+            <figure>
+                <img src="includes/img/user.png" alt="">
+                <figcaption>
+                    <h2>Admin</h2>
+                </figcaption>
+            </figure>
+        </section>
         <nav>
             <ul>
                 <li><a title="Dashboard" href="http://localhost/projeto4/admin/">Dashboard</a></li>

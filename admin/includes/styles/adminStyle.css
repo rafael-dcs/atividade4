@@ -1,3 +1,7 @@
+body {
+  background-color: #eee;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifd; }
+
 #loginForm {
   background-color: white;
   width: 425px;
@@ -13,10 +17,6 @@
     #loginForm form #login {
       width: 100%;
       margin-top: 2em; }
-
-body {
-  background-color: #eee;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifd; }
 
 header {
   width: 15em;
@@ -34,6 +34,17 @@ header {
       color: #333; }
       header h1 a:hover {
         color: #333; }
+  header section figure {
+    width: 100%;
+    padding: 2em;
+    border-bottom: solid 1px white; }
+    header section figure img {
+      width: 60px; }
+    header section figure figcaption {
+      float: right; }
+      header section figure figcaption h2 {
+        font-size: medium;
+        padding-right: 1em; }
   header nav ul {
     padding-left: 0; }
     header nav ul li {
