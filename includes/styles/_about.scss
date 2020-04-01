@@ -10,7 +10,11 @@
 }
 
 .section{
-    #aboutArticle{
+    #aboutTitle{
+        padding-bottom: 4em;
+        h2{
+            text-align: center;
+        }
         p{
             width: 60%;
             margin: 0 auto;
@@ -18,6 +22,10 @@
         }
     }
     #aboutTxt{
+        h3{
+            text-align: left;
+            font-size: 20px;
+        }
         p{
             font-size: medium;
             text-align: justify;   
@@ -31,7 +39,7 @@
 
 @media (max-width: $tablet){
     .section{
-        #aboutArticle{
+        #aboutTitle{
             p{
                 width: 80%;
             }
@@ -41,7 +49,7 @@
 
 @media (max-width: $mobileL){
     .section{
-        #aboutArticle{
+        #aboutTitle{
             p{
                 width: 100%;
                 text-align: justify;

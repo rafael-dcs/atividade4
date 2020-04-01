@@ -1,12 +1,12 @@
 <?php require_once "header.php" ?>
     <section class="section">
-        <article id="aboutArticle">
+        <div id="aboutTitle">
             <h2>About Us</h2>
             <p>
                   Ipsum cillum reprehenderit mollit labore quis qui eiusmod laboris esse ea occaecat.
             Laborum incididunt dolore tempor elit sint ad deserunt veniam labore incididunt velit adipisicing.
             </p>
-        </article>
+        </div>
         <section class="about row">
             <aside id="aboutImg" class="col-md-6">
                 <img src="includes/img/aboutus.jpg" class="img-responsive" alt="">

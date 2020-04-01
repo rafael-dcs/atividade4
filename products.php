@@ -1,9 +1,9 @@
 <?php require_once "header.php" ?>
     <section class="section">
-        <article>
+        <div>
             <h2>Check out our products</h2>
             <p>Consectetur sint reprehenderit culpa enim.</p>
-        </article>
+        </div>
 
         <section class="row products">
             <figure class="col-xs-4 shop">

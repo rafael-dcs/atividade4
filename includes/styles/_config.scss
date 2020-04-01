@@ -9,13 +9,13 @@ $mobileM: 375px;
 $mobileS: 320px;
 
 @mixin weightDefault{
-    font-weight: 700;
+    font-weight: 600;
 }
 
 @mixin styledLink {
-    h3{
+    a{
         @include weightDefault;
-        font-size: medium;
+        font-size: 18px;
     }
 }
 
@@ -28,4 +28,27 @@ $mobileS: 320px;
             background-color: #ccc;
         }
     }
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifd;
+    p{
+        font-size: 16px;
+    }
+    a{
+        color: $cinzaEscuro;
+        &:hover{
+            color: $cinzaClaro;
+        }
+    }
+    h1, h2, h3{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.divider{
+    width: 100%;
+    height: 1px;
+    background-color: #333;
 }

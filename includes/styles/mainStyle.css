@@ -1,5 +1,28 @@
-#contactMsg article p {
-  text-align: justify; }
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifd; }
+  body p {
+    font-size: 16px; }
+  body a {
+    color: #333; }
+    body a:hover {
+      color: #999; }
+  body h1, body h2, body h3 {
+    margin-top: 0;
+    margin-bottom: 0; }
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #333; }
+
+#contactMsg {
+  padding-top: 4em; }
+  #contactMsg div p {
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    text-align: justify; }
+  #contactMsg form {
+    padding-top: 2em; }
 
 .contactForm {
   width: 80%;
@@ -16,13 +39,15 @@
     .contactForm ul li {
       color: #999;
       vertical-align: middle;
-      padding: 0.2em; }
+      padding: 0.2em;
+      font-size: 14px; }
       .contactForm ul li a {
-        color: #999; }
-    .contactForm ul h6 {
-      color: black;
-      margin-bottom: 0;
-      padding-top: 1em; }
+        color: #999;
+        font-size: 14px; }
+      .contactForm ul li b {
+        color: #333; }
+    .contactForm ul li.b {
+      padding-top: 2em; }
 
 @media (max-width: 768px) {
   .contactForm ul {
@@ -44,10 +69,17 @@
   text-transform: uppercase;
   padding-bottom: 1em; }
 
-.section #aboutArticle p {
-  width: 60%;
-  margin: 0 auto;
-  color: #777; }
+.section #aboutTitle {
+  padding-bottom: 4em; }
+  .section #aboutTitle h2 {
+    text-align: center; }
+  .section #aboutTitle p {
+    width: 60%;
+    margin: 0 auto;
+    color: #777; }
+.section #aboutTxt h3 {
+  text-align: left;
+  font-size: 20px; }
 .section #aboutTxt p {
   font-size: medium;
   text-align: justify; }
@@ -61,10 +93,10 @@
   margin-top: 2em; }
 
 @media (max-width: 768px) {
-  .section #aboutArticle p {
+  .section #aboutTitle p {
     width: 80%; } }
 @media (max-width: 530px) {
-  .section #aboutArticle p {
+  .section #aboutTitle p {
     width: 100%;
     text-align: justify; } }
 nav {
@@ -90,13 +122,6 @@ nav {
       border-color: #333;
       color: white; }
 
-body {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifd; }
-  body a {
-    color: #333; }
-    body a:hover {
-      color: #999; }
-
 .menu {
   width: 100%;
   margin: 0 auto;
@@ -105,16 +130,17 @@ body {
   .menu div {
     padding: 0 3em; }
     .menu div h1 {
-      font-size: small;
-      font-weight: 700; }
+      font-size: 16px;
+      font-weight: 600; }
   .menu nav {
     padding: 0 2em; }
     .menu nav ul {
-      float: right;
-      margin-top: 17px; }
+      float: right; }
       .menu nav ul li {
         display: inline;
         padding: 0 1em; }
+        .menu nav ul li a {
+          font-size: 16px; }
         .menu nav ul li img {
           width: 20px; }
     .menu nav .menuButton {
@@ -122,11 +148,90 @@ body {
       display: none;
       width: 100px;
       left: 72%;
-      bottom: 5em; }
+      bottom: 1em; }
 
-.row {
-  padding: 2em 0; }
+@media (max-width: 768px) {
+  .menu {
+    height: 10em; }
+    .menu div h1 {
+      position: absolute;
+      top: 2em;
+      right: 2em; }
+    .menu nav {
+      width: 100%;
+      padding: 0; }
+      .menu nav .menuButton {
+        display: flex; }
+      .menu nav .menuList {
+        width: 100%;
+        display: none;
+        position: relative;
+        bottom: 5em;
+        background-color: #f1f1f1;
+        padding-left: 0;
+        z-index: 1; }
+        .menu nav .menuList li {
+          display: list-item;
+          list-style: none;
+          text-align: center;
+          padding: 0.5em 0;
+          border-bottom: solid 1px #333; }
+          .menu nav .menuList li:hover {
+            background-color: #333; } }
+footer {
+  margin-top: 7em;
+  padding-top: 3em;
+  background-color: black;
+  color: white; }
+  footer .footer {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 3em; }
+    footer .footer .col-xs-3 {
+      position: relative; }
+    footer .footer .col-xs-2 a {
+      margin-left: 3rem; }
+    footer .footer a {
+      color: white; }
+    footer .footer p {
+      padding-top: 3.2em;
+      font-size: 14px; }
+    footer .footer ul {
+      padding-top: 2em;
+      list-style-type: none;
+      padding-inline-start: 0; }
+      footer .footer ul a, footer .footer ul li {
+        margin: 1em 0;
+        font-size: 14px; }
+      footer .footer ul img {
+        width: 10px; }
+    footer .footer .copyright {
+      padding-top: 2em;
+      left: 10%; }
+      footer .footer .copyright ul li {
+        display: inline; }
+        footer .footer .copyright ul li a {
+          margin: 0 0.7em;
+          color: #333; }
+        footer .footer .copyright ul li .icons {
+          margin: 0 1em; }
 
+@media (max-width: 1024px) {
+  footer .footer .col-xs-2 a {
+    margin-left: 1rem; }
+
+  footer .footer .copyright {
+    left: 0; } }
+@media (max-width: 768px) {
+  footer .footer .col-xs-3 {
+    width: 100%; }
+  footer .footer .col-xs-2 {
+    width: 25%; } }
+@media (max-width: 530px) {
+  footer .footer .col-xs-2 {
+    width: 50%; }
+  footer .footer .copyright ul li a {
+    margin: 0 0.5em; } }
 #banner {
   position: relative;
   padding-top: 10em;
@@ -148,34 +253,38 @@ body {
     margin-bottom: 1em; }
 
 .view {
-  padding-top: 3em;
-  margin-left: 25%; }
+  margin-left: 20%; }
   .view h2 {
-    font-size: 38pt;
-    font-weight: 700; }
+    font-size: 52px;
+    font-weight: 600; }
   .view p {
     width: 65%;
-    padding-bottom: 3em; }
-  .view h3 {
-    font-weight: 700;
-    font-size: medium; }
+    padding-bottom: 3em;
+    font-size: 18px; }
+  .view a {
+    font-weight: 600;
+    font-size: 18px; }
 
 .section {
-  padding-top: 5em;
+  padding-top: 6em;
   margin: 0 auto;
   width: 80%; }
   .section p {
-    text-align: center; }
-  .section h2 {
     text-align: center;
-    color: black; }
+    margin-bottom: 0; }
+  .section h2 {
+    text-align: center; }
+  .section h3 {
+    text-align: center;
+    color: black;
+    font-size: 30px; }
   .section img {
     padding-bottom: 2em; }
   .section .shop:hover .overlay {
     opacity: 1; }
 
 .delivery {
-  padding-top: 4em;
+  padding-top: 6em;
   margin: 0 auto; }
   .delivery .col {
     padding: 0; }
@@ -190,10 +299,11 @@ body {
       display: inline-block; }
       .delivery figure figcaption p {
         text-align: left;
-        color: #999; }
-      .delivery figure figcaption h3 {
-        font-weight: 700;
-        font-size: medium; }
+        color: #999;
+        margin: 0; }
+      .delivery figure figcaption a {
+        font-weight: 600;
+        font-size: 18px; }
 
 .products {
   width: 100%;
@@ -204,7 +314,8 @@ body {
       width: 100%; }
     .products figure figcaption {
       position: relative;
-      bottom: 1em; }
+      bottom: 1em;
+      font-size: 18px; }
 
 .overlay {
   position: absolute;
@@ -233,7 +344,7 @@ body {
 
 .joinForm {
   position: relative;
-  padding-top: 3em; }
+  padding-top: 4em; }
   .joinForm form input {
     width: 18em;
     margin-right: 1em;
@@ -243,54 +354,12 @@ body {
     border-width: 5px;
     height: 3em; }
   .joinForm form button {
-    width: 70px;
+    width: 90px;
     background-color: black;
     color: white;
     border: none;
     height: 3em; }
 
-footer {
-  margin-top: 5em;
-  padding-top: 3em;
-  background-color: black;
-  color: white; }
-  footer .footer {
-    width: 80%;
-    margin: 0 auto; }
-    footer .footer .col-xs-3 {
-      margin-right: 4em;
-      position: relative;
-      bottom: 2em; }
-      footer .footer .col-xs-3 h3 {
-        font-weight: 700;
-        font-size: medium; }
-    footer .footer a {
-      color: white; }
-    footer .footer p {
-      padding-top: 3.2em;
-      font-size: 9pt; }
-    footer .footer ul {
-      padding-top: 2em;
-      list-style-type: none;
-      padding-inline-start: 0; }
-      footer .footer ul a, footer .footer ul li {
-        margin: 1em 0;
-        font-size: 9pt; }
-      footer .footer ul img {
-        width: 10px; }
-    footer .footer .copyright ul {
-      margin: 0; }
-      footer .footer .copyright ul li {
-        display: inline; }
-        footer .footer .copyright ul li a {
-          margin: 0 3em;
-          color: #333; }
-        footer .footer .copyright ul li .icons {
-          margin: 0 1em; }
-
-@media (max-width: 1024px) {
-  footer .footer .copyright ul li a {
-    margin: 0 1.5em; } }
 @media (max-width: 964px) {
   #banner figure {
     display: none; }
@@ -325,39 +394,8 @@ footer {
     opacity: 1; }
 
   .joinForm form input {
-    width: 14em; }
-
-  footer .footer .col-xs-3 {
-    width: 100%; }
-  footer .footer .col-xs-2 {
-    width: 25%; } }
+    width: 14em; } }
 @media (max-width: 530px) {
-  .menu {
-    height: 10em; }
-    .menu div h1 {
-      font-size: large; }
-    .menu nav {
-      width: 100%;
-      padding: 0; }
-      .menu nav .menuButton {
-        display: flex; }
-      .menu nav .menuList {
-        width: 100%;
-        display: none;
-        position: relative;
-        bottom: 5em;
-        background-color: #f1f1f1;
-        padding-left: 0;
-        z-index: 1; }
-        .menu nav .menuList li {
-          display: list-item;
-          list-style: none;
-          text-align: center;
-          padding: 0.5em 0;
-          border-bottom: solid 1px #333; }
-          .menu nav .menuList li:hover {
-            background-color: #333; }
-
   #banner {
     padding-top: 0; }
     #banner .view {
@@ -367,11 +405,6 @@ footer {
     width: 50%; }
 
   .joinForm form input {
-    width: 12em; }
-
-  footer .footer .col-xs-2 {
-    width: 50%; }
-  footer .footer .copyright ul li a {
-    margin: 0 0.5em; } }
+    width: 12em; } }
 
 /*# sourceMappingURL=mainStyle.css.map */

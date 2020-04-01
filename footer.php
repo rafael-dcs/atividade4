@@ -1,9 +1,9 @@
     <footer>
         <section class="row footer">
-            <article class="col-xs-3">
-                <h3><a title="Home" href="index.php">SHOPPING</a></h3>
+            <div class="col-xs-3">
+                <a title="Home" href="index.php">SHOPPING</a>
                 <p>Voluptate duis reprehenderit id dolor dolore et do est cupidatat. Id ea excepteur deserunt et reprehenderit culpa reprehenderit voluptate.</p>
-            </article>
+            </div>
             <nav class="col-xs-2">
                 <a title="Sitemap" href="">Sitemap</a>
                 <ul>
@@ -28,7 +28,7 @@
                     <li><a title="Projects" href="">Projects</a></li>
                 </ul>
             </nav>
-            <nav class="col-xs-2">
+            <nav class="col-xs-3">
                 <a title="Contact us" href="contact.php">Contact Us</a>
                 <ul>
                     <li><img src="includes/img/phone.png" alt="">&nbsp;855-5564-65651</li>
@@ -37,6 +37,7 @@
                 </ul>
             </nav>
         </section>
+        <div class="divider"></div>
         <section class="row footer">
             <nav class="copyright">
                 <ul>

@@ -1,8 +1,14 @@
 #contactMsg{
-    article{
+    padding-top: 4em;
+    div{
         p{
+            padding-top: 0.5em;
+            padding-bottom: 1em;
             text-align: justify;
         }
+    }
+    form{
+        padding-top: 2em;
     }
 }
 
@@ -17,14 +23,17 @@
             color: $cinzaClaro;
             vertical-align: middle;
             padding: 0.2em;
+            font-size: 14px;
             a{
                 color: $cinzaClaro;
+                font-size: 14px;
+            }
+            b{
+                color: #333;
             }
         }
-        h6{
-            color: black;
-            margin-bottom: 0;
-            padding-top: 1em;
+        li.b{
+            padding-top: 2em;
         }
     }
 }
