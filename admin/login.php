@@ -1,3 +1,21 @@
+<?php
+require_once "functions.php";
+if(session_id() == ""){
+    session_start();
+}
+if(!isset($_SESSION['login'])){
+    if(isset($_POST['login'])){
+        $username = $_POST['user'];
+        $password = $_POST['pass'];
+        $_SESSION['login'] = login($username, $password);
+        if($_SESSION['login'] != null){
+            header('Location: index.php');
+        }
+    }
+}else{
+    header('Location: index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +27,7 @@
 </head>
 <body>
     <section id="loginForm">
-        <form action="index.php" method="POST">
+        <form action="" method="POST">
         <h2>SIGN IN</h2>
             <div class="form-group">
                 <label for="user">Username</label>

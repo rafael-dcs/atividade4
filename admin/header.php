@@ -1,3 +1,10 @@
+<?php 
+require_once "functions.php";
+if(session_id() == ""){
+    session_start();
+}
+if(!isset($_SESSION['login'])) header('Location: login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +16,7 @@
 </head>
 <body>
     <header>
-        <h1><a title="Home" href="http://localhost/projeto4/">SHOPPING</a></h1>
+        <h1><a title="Home" href="http://ijcoinf19/projeto4/">SHOPPING</a></h1>
         <section>
             <figure>
                 <img src="includes/img/user.png" alt="">
@@ -20,11 +27,11 @@
         </section>
         <nav>
             <ul>
-                <li><a title="Dashboard" href="http://localhost/projeto4/admin/">Dashboard</a></li>
-                <li><a title="Products" href="http://localhost/projeto4/admin/?page=products">Products</a></li>
-                <li><a title="About us" href="http://localhost/projeto4/admin/?page=about">About us</a></li>
-                <li><a title="Contact" href="http://localhost/projeto4/admin/?page=contact">Contact</a></li>
-                <li><a title="Logout" href="http://localhost/projeto4/admin/?page=logout">Logout</a></li>
+                <li><a title="Dashboard" href="http://ijcoinf19/projeto4/admin/">Dashboard</a></li>
+                <li><a title="Products" href="http://ijcoinf19/projeto4/admin/?page=products">Products</a></li>
+                <li><a title="About us" href="http://ijcoinf19/projeto4/admin/?page=about">About us</a></li>
+                <li><a title="Contact" href="http://ijcoinf19/projeto4/admin/?page=contact">Contact</a></li>
+                <li><a title="Logout" href="http://ijcoinf19/projeto4/admin/?page=logout">Logout</a></li>
             </ul>
         </nav>
     </header>
