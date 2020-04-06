@@ -12,6 +12,11 @@ body {
     border-bottom: 1px solid #999;
     padding-bottom: 10px; }
 
+form textarea, form input[type="text"] {
+  width: 80%; }
+form .edit {
+  padding-top: 1em; }
+
 #loginForm {
   background-color: white;
   width: 425px;
