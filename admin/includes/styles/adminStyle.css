@@ -32,6 +32,8 @@ form .edit {
     #loginForm form #login {
       width: 100%;
       margin-top: 2em; }
+    #loginForm form input[type="text"] {
+      width: 100%; }
 
 header {
   width: 15em;
