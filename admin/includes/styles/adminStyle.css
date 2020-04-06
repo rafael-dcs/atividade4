@@ -82,5 +82,7 @@ header {
   height: 8em; }
   #dash .panel .panel-body {
     color: #333; }
+#dash .col-xs-3 {
+  width: 30%; }
 
 /*# sourceMappingURL=adminStyle.css.map */
