@@ -21,6 +21,17 @@ function openConnection(){
     return $conn;
 }
 
+function getProducts(){
+    $sql = "SELECT products.ID, products.NAME, products.VALUE FROM products";
+    $conn = openConnection();
+    $result = $conn->query($sql);
+    $conn->close();
+    if($result->num_rows > 0){
+        return $result;
+    }else{
+        return null;
+    }
+}
 
 /*
 session_start();

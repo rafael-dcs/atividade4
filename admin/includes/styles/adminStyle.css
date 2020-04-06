@@ -2,6 +2,16 @@ body {
   background-color: #eee;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifd; }
 
+.section {
+  position: relative;
+  left: 18em;
+  bottom: 30em;
+  width: 70%; }
+  .section h2 {
+    font-size: 24px;
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px; }
+
 #loginForm {
   background-color: white;
   width: 425px;
@@ -61,5 +71,11 @@ header {
         background-color: #333; }
         header nav ul li:hover a {
           color: white; }
+
+#dash .panel {
+  margin-right: 1em;
+  height: 8em; }
+  #dash .panel .panel-body {
+    color: #333; }
 
 /*# sourceMappingURL=adminStyle.css.map */
