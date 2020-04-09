@@ -38,6 +38,7 @@
                         <button class="btn btn-default" name="editProd">Edit</button>
                     </div>
                 </form>
+            <?php elseif($_GET["option"] == 2): deleteProduct($_GET['prod']) ?>
             <?php endif; ?>
         <?php else: ?>
             <table class="table tabel-hover table-responsive">
@@ -62,3 +63,11 @@
         <?php endif; ?>
     </section>
 </section>
+<?php
+if(filter_input(INPUT_POST, "newProd")){
+    newProduct();
+}
+if(filter_input(INPUT_POST, "editProd")){
+    editProduct($_GET['prod']);
+}
+?>
