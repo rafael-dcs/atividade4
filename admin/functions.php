@@ -33,6 +33,65 @@ function getProducts(){
     }
 }
 
+function saveAbout(){
+    $title = $_POST["title"];
+    $about = $_POST["about"];
+    $image = $_FILES["image"]["name"];
+    $sql = "UPDATE about SET title='{$title}', `text`='{$about}', `image`='{$image}'";
+    $conn = openConnection();
+    $result = $conn->query($sql);
+    if(!$conn->error){
+        move_uploaded_file($_FILES["image"]["tmp_name"], "includes/img/" . $image);
+    }
+    $conn->close();
+}
+
+function saveContact(){
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $face = $_POST["face"];
+    $address = $_POST["address"];
+    $district = $_POST["district"];
+    $city = $_POST["city"];
+    $sql = "UPDATE contact SET email='{$email}', phone='{$phone}', facebook='{$face}', `address`='{$address}', district='{$district}', `city`='{$city}'";
+    $conn = openConnection();
+    $result = $conn->query($sql);
+    $conn->close();
+}
+
+function newProduct(){
+    $name = $_POST["name"];
+    $value = $_POST["value"];
+    $image = $_FILES["image"]["name"];
+    $sql = "INSERT INTO products (`NAME`, `VALUE`, `IMAGE`) VALUES ('{$name}', '{$value}', '{$image}') ";
+    $conn = openConnection();
+    $result = $conn->query($sql);
+    if(!$conn->error){
+        move_uploaded_file($_FILES["image"]["tmp_name"], "includes/img/" . $image);
+    }
+    $conn->close();
+}
+
+function editProduct($id){
+    $name = $_POST["name"];
+    $value = $_POST["value"];
+    $image = $_FILES["image"]["name"];
+    $sql = "UPDATE products SET `NAME`='{$name}', `VALUE`='{$value}', `IMAGE`='{$image}' WHERE ID={$id}";
+    $conn = openConnection();
+    $result = $conn->query($sql);
+    if(!$conn->error){
+        move_uploaded_file($_FILES["image"]["tmp_name"], "includes/img/" . $image);
+    }
+    $conn->close();
+}
+
+function deleteProduct($id){
+    $sql = "DELETE FROM products WHERE ID={$id}";
+    $conn = openConnection();
+    $result = $conn->query($sql);
+    $conn->close();
+}
+
 /*
 session_start();
 
