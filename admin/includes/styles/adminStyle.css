@@ -4,9 +4,13 @@ body {
 
 .section {
   position: relative;
-  left: 18em;
-  bottom: 30em;
-  width: 70%; }
+  left: 17em;
+  top: 1em;
+  width: 70%;
+  box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.31);
+  background-color: #eee;
+  border-radius: 2px;
+  padding: 1em; }
   .section h2 {
     font-size: 24px;
     border-bottom: 1px solid #999;
@@ -38,6 +42,7 @@ form .edit {
 header {
   width: 15em;
   background-color: #ddd;
+  position: fixed;
   height: 100%; }
   header h1 {
     font-size: medium;
