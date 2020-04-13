@@ -22,7 +22,31 @@ function openConnection(){
 }
 
 function getProducts(){
-    $sql = "SELECT products.ID, products.NAME, products.VALUE, products.IMAGE FROM products";
+    $sql = "SELECT products.ID, products.NAME, products.VALUE FROM products";
+    $conn = openConnection();
+    $result = $conn->query($sql);
+    $conn->close();
+    if($result->num_rows > 0){
+        return $result;
+    }else{
+        return null;
+    }
+}
+
+function getContact(){
+    $sql = "SELECT idcontact, email, phone, facebook, address, district, city FROM contact";
+    $conn = openConnection();
+    $result = $conn->query($sql);
+    $conn->close();
+    if($result->num_rows > 0){
+        return $result;
+    }else{
+        return null;
+    }
+}
+
+function getAbout(){
+    $sql = "SELECT idabout, title, text FROM about";
     $conn = openConnection();
     $result = $conn->query($sql);
     $conn->close();
@@ -37,11 +61,16 @@ function saveAbout(){
     $title = $_POST["title"];
     $about = $_POST["about"];
     $image = $_FILES["image"]["name"];
-    $sql = "UPDATE about SET title='{$title}', `text`='{$about}', `image`='{$image}'";
+    $sql = "UPDATE about SET title='{$title}', `text`='{$about}' ";
     $conn = openConnection();
-    $result = $conn->query($sql);
-    if(!$conn->error){
-        move_uploaded_file($_FILES["image"]["tmp_name"], "includes/img/" . $image);
+    $conn->query($sql);
+    if($image != null){
+        $sql = "UPDATE about SET image='{$image}' ";
+        $conn = openConnection();
+        $result = $conn->query($sql);
+        if(!$conn->error){
+            move_uploaded_file($_FILES["image"]["tmp_name"], "../includes/img/" . $image);
+        }
     }
     $conn->close();
 }
@@ -67,7 +96,7 @@ function newProduct(){
     $conn = openConnection();
     $result = $conn->query($sql);
     if(!$conn->error){
-        move_uploaded_file($_FILES["image"]["tmp_name"], "includes/img/" . $image);
+        move_uploaded_file($_FILES["image"]["tmp_name"], "../includes/img/" . $image);
     }
     $conn->close();
 }
@@ -87,7 +116,7 @@ function editProduct($id){
         $conn = openConnection();
         $result = $conn->query($sql);
         if(!$conn->error){
-            move_uploaded_file($_FILES["image"]["tmp_name"], "includes/img/" . $image);
+            move_uploaded_file($_FILES["image"]["tmp_name"], "../includes/img/" . $image);
         }
     }
 

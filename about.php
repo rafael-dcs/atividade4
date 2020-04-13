@@ -8,19 +8,17 @@
             </p>
         </div>
         <section class="about row">
+            <?php
+            $result = getAbout();
+            $row = $result->fetch_assoc();
+            ?>
             <aside id="aboutImg" class="col-md-6">
-                <img src="includes/img/aboutus.jpg" class="img-responsive" alt="">
+                <img src="includes/img/<?php echo $row['image'] ?>" class="img-responsive" alt="">
             </aside>
             <article id="aboutTxt" class="col-md-6">
-                <h3>Ut elit esse adipisicing minim adipisicing</h3>
+                <h3><?php echo $row['title'] ?></h3>
                 <p id="justText">
-                    Ut occaecat minim nostrud qui ex reprehenderit velit magna est do Lorem eu 
-                    duis. Eiusmod ea sint eiusmod sunt veniam. Proident ipsum do enim non 
-                    laborum consequat esse aliqua quis. Magna consequat incididunt tempor dolor 
-                    occaecat. Cillum veniam nisi adipisicing qui eiusmod ex qui eiusmod pariatur 
-                    duis. Officia aliquip esse esse occaecat sint enim. Cupidatat veniam fugiat 
-                    mollit et culpa nostrud. Duis in nisi ullamco minim elit ullamco commodo veniam 
-                    sit ullamco minim aliqua mollit aliqua. <br>
+                    <?php echo $row['text'] ?> <br>
                     <a title="Products" href="products.php"><button class="btn btn-default">Know our products</button></a>
                 </p>
             </article>

@@ -25,17 +25,21 @@
             </form>
         </section>
         <address id="contactInfo" class="col-sm-4">
+            <?php 
+            $result = getContact();
+            $row = $result->fetch_assoc();
+            ?>
             <ul>
                 <li><b>EMAIL</b></li>
-                <li><a href="mailto:shopping@domain.com" title="Send us an email">shopping@domain.com</a></li>
+                <li><a href="mailto:<?php echo $row['email'] ?>" title="Send us an email"><?php echo $row['email'] ?></a></li>
                 <li><b>TELEPHONE</b></li>
-                <li>855-5564-65651</li>
+                <li><?php echo $row['phone'] ?></li>
                 <li><b>FACEBOOK</b></li>
-                <li><a href="https://facebook.com/shopping" title="Facebook page">facebook.com/shopping</a></li>
+                <li><a href="https://<?php echo $row['facebook'] ?>" title="Facebook page"><?php echo $row['facebook'] ?></a></li>
                 <li><b>ADDRESS</b></li>
-                <li>55B Street Name</li>
-                <li>District Name</li>
-                <li>City</li>
+                <li><?php echo $row['address'] ?></li>
+                <li><?php echo $row['district'] ?></li>
+                <li><?php echo $row['city'] ?></li>
             </ul>
         </address>
     </section>
