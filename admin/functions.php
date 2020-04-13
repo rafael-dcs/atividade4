@@ -64,7 +64,7 @@ function saveAbout(){
     $sql = "UPDATE about SET title='{$title}', `text`='{$about}' ";
     $conn = openConnection();
     $conn->query($sql);
-    if($image != null){
+    if($image != null && $image !== ""){
         $sql = "UPDATE about SET image='{$image}' ";
         $conn = openConnection();
         $result = $conn->query($sql);
@@ -111,7 +111,7 @@ function editProduct($id){
         die($conn->error);
     }
 
-    if($image !== null){
+    if($image !== null && $image !== ""){
         $sql = "UPDATE products SET `IMAGE`='{$image}' WHERE ID={$id}";
         $conn = openConnection();
         $result = $conn->query($sql);

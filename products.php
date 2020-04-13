@@ -15,7 +15,7 @@
                     <a title="<?php echo $row['NAME'] ?>" href=""><img class="img-responsive" src="includes/img/<?php echo $row['IMAGE'] ?>" alt=""></a>
                     <figcaption>
                         <a title="<?php echo $row['NAME'] ?>" href=""><?php echo $row['NAME'] ?></a>
-                        <span class="preco"><?php echo $row['VALUE'] ?></span>
+                        <span class="preco"><?php echo $row['VALUE'] ?> <small>$</small></span>
                         <a class="overlay" title="Add to my Cart" href="">ADD TO CART</a>
                     </figcaption>
                 </figure>

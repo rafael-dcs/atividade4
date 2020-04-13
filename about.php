@@ -19,7 +19,7 @@
                 <h3><?php echo $row['title'] ?></h3>
                 <p id="justText">
                     <?php echo $row['text'] ?> <br>
-                    <a title="Products" href="products.php"><button class="btn btn-default">Know our products</button></a>
+                    <a title="Products" href="products.php"><button id="button" class="">Know our products</button></a>
                 </p>
             </article>
         </section>
