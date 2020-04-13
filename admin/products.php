@@ -1,3 +1,12 @@
+<?php
+if(isset($_POST['newProd']) && $_POST['newProd'] !== null){
+    newProduct();
+}
+if(isset($_POST['editProd']) && $_POST['editProd'] !== null){
+    echo "AAAAAAAAAAAAAAAAAAAAAAAAA";
+    editProduct($_GET['prod']);
+}
+?>
 <section class="section">
     <h2>Products</h2>
     <section id="products">
@@ -20,25 +29,34 @@
                         <button class="btn btn-default" name="newProd">New</button>
                     </div>
                 </form>
-            <?php elseif($_GET["option"] == 2): ?>
-                <form action="" method="post" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input class="form-control" type="text" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="value">Value</label><br>
-                        <input class="form-control" type="text" name="value" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="image">Image</label>
-                        <input type="file" name="image" required>
-                    </div>
-                    <div class="edit">
-                        <button class="btn btn-default" name="editProd">Edit</button>
-                    </div>
-                </form>
-            <?php elseif($_GET["option"] == 2): deleteProduct($_GET['prod']) ?>
+            <?php 
+            elseif($_GET["option"] == 2): 
+                $result = getProducts();
+                while($row = $result->fetch_assoc()):
+                    if($row['ID'] == $_GET['prod']): ?>
+                        <form action="" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input class="form-control" type="text" name="name" value="<?php echo $row['NAME'] ?>" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="value">Value</label><br>
+                                <input class="form-control" type="text" name="value" value="<?php echo $row['VALUE'] ?>" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="image">Image</label>
+                                <input type="file" name="image" >
+                            </div>
+                            <div class="edit">
+                                <button type="submit" class="btn btn-default" name="editProd">Edit</button>
+                            </div>
+                        </form>
+            <?php   endif;
+                endwhile;
+            elseif($_GET["option"] == 3): 
+                deleteProduct($_GET['prod']);
+                header('Location: http://ijcoinf19/projeto4/admin/?page=products');
+            ?>
             <?php endif; ?>
         <?php else: ?>
             <table class="table tabel-hover table-responsive">
@@ -63,11 +81,3 @@
         <?php endif; ?>
     </section>
 </section>
-<?php
-if(filter_input(INPUT_POST, "newProd")){
-    newProduct();
-}
-if(filter_input(INPUT_POST, "editProd")){
-    editProduct($_GET['prod']);
-}
-?>

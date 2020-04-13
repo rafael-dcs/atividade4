@@ -22,7 +22,7 @@ function openConnection(){
 }
 
 function getProducts(){
-    $sql = "SELECT products.ID, products.NAME, products.VALUE FROM products";
+    $sql = "SELECT products.ID, products.NAME, products.VALUE, products.IMAGE FROM products";
     $conn = openConnection();
     $result = $conn->query($sql);
     $conn->close();
@@ -76,12 +76,21 @@ function editProduct($id){
     $name = $_POST["name"];
     $value = $_POST["value"];
     $image = $_FILES["image"]["name"];
-    $sql = "UPDATE products SET `NAME`='{$name}', `VALUE`='{$value}', `IMAGE`='{$image}' WHERE ID={$id}";
+    $sql = "UPDATE products SET `NAME`='{$name}', `VALUE`='{$value}' WHERE ID={$id} ";
     $conn = openConnection();
-    $result = $conn->query($sql);
-    if(!$conn->error){
-        move_uploaded_file($_FILES["image"]["tmp_name"], "includes/img/" . $image);
+    if(!$conn->query($sql)){
+        die($conn->error);
     }
+
+    if($image !== null){
+        $sql = "UPDATE products SET `IMAGE`='{$image}' WHERE ID={$id}";
+        $conn = openConnection();
+        $result = $conn->query($sql);
+        if(!$conn->error){
+            move_uploaded_file($_FILES["image"]["tmp_name"], "includes/img/" . $image);
+        }
+    }
+
     $conn->close();
 }
 
@@ -91,23 +100,3 @@ function deleteProduct($id){
     $result = $conn->query($sql);
     $conn->close();
 }
-
-/*
-session_start();
-
-if(!isset($_SESSION['login']) || $_SESSION['login'] !== 'admin'){
-    if(isset($_POST['login']) && $_POST['login'] !== null){
-        if($_POST['user'] === 'admin' && $_POST['pass'] === 'admin'){
-            $_SESSION['login'] = 'admin';
-            $_GET['page'] = null;
-        }
-    }else{
-        header('Location: login.php');
-    }
-}
-
-if(isset($_GET['page']) && $_GET['page'] === 'logout'){
-    unset($_SESSION['login']);
-    header('Location: http://ijcoinf19/projeto4/');
-}
-*/
