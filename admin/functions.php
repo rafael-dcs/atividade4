@@ -69,7 +69,11 @@ function saveAbout(){
         $conn = openConnection();
         $result = $conn->query($sql);
         if(!$conn->error){
-            move_uploaded_file($_FILES["image"]["tmp_name"], "../includes/img/" . $image);
+            $dir = '../includes/img/';
+            $file = $dir . $image;
+            if(is_uploaded_file($_FILES['image']['tmp_name'])){
+                file_put_contents($file, file_get_contents($_FILES['image']['tmp_name']));
+            }
         }
     }
     $conn->close();
@@ -96,7 +100,11 @@ function newProduct(){
     $conn = openConnection();
     $result = $conn->query($sql);
     if(!$conn->error){
-        move_uploaded_file($_FILES["image"]["tmp_name"], "../includes/img/" . $image);
+        $dir = '../includes/img/';
+        $file = $dir . $image;
+        if(is_uploaded_file($_FILES['image']['tmp_name'])){
+            file_put_contents($file, file_get_contents($_FILES['image']['tmp_name']));
+        }
     }
     $conn->close();
 }
@@ -116,7 +124,11 @@ function editProduct($id){
         $conn = openConnection();
         $result = $conn->query($sql);
         if(!$conn->error){
-            move_uploaded_file($_FILES["image"]["tmp_name"], "../includes/img/" . $image);
+            $dir = '../includes/img/';
+            $file = $dir . $image;
+            if(is_uploaded_file($_FILES['image']['tmp_name'])){
+                file_put_contents($file, file_get_contents($_FILES['image']['tmp_name']));
+            }
         }
     }
 
