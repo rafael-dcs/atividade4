@@ -1,6 +1,6 @@
 header{
     width: 15em;
-    background-color: #ddd;
+    background-color: #313131;
     position: fixed;
     height: 100%;
     h1{
@@ -12,10 +12,10 @@ header{
         border-bottom: solid 1px white;
         margin-block-end: 0;
         a{
-            color: #333;
-            &:hover{
-                color: #333;
-            }
+            color: #ddd;
+            // &:hover{
+            //     color: #333;
+            // }
         }
     }
     section{
@@ -31,6 +31,7 @@ header{
                 h2{
                     font-size: medium;
                     padding-right: 1em;
+                    color: #ddd;
                 }
             }
         }
@@ -43,7 +44,7 @@ header{
                 border-bottom: solid 1px white;
                 height: 100%;
                 a{
-                    color: #333;
+                    color: #ddd;
                     padding: 15px;
                     display: block;
                     width: 100%;

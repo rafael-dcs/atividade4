@@ -1,5 +1,5 @@
 body{
-    background-color: #eee;
+    background-color: #616161;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifd;
 }
 
@@ -10,13 +10,14 @@ body{
     width: 70%;
     // border: 1px solid #999;
     box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.31);
-    background-color: #eee;
+    background-color: #313131;
     border-radius: 2px;
     padding: 1em;
     h2{
         font-size: 24px;
         border-bottom: 1px solid #999;
         padding-bottom: 10px;
+        color: #DDD;
     }
 }
 
@@ -26,5 +27,19 @@ form{
     }
     .edit{
         padding-top: 1em;
+    }
+    label{
+        color: #EEE;
+        font-weight: 500;
+    }
+}
+
+table{
+    td{
+        color: #DDD;
+    }
+    th{
+        color: #EEE;
+        font-weight: 500;
     }
 }

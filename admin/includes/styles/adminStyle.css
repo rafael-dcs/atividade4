@@ -1,5 +1,5 @@
 body {
-  background-color: #eee;
+  background-color: #616161;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifd; }
 
 .section {
@@ -8,18 +8,28 @@ body {
   top: 1em;
   width: 70%;
   box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.31);
-  background-color: #eee;
+  background-color: #313131;
   border-radius: 2px;
   padding: 1em; }
   .section h2 {
     font-size: 24px;
     border-bottom: 1px solid #999;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    color: #DDD; }
 
 form textarea, form input[type="text"] {
   width: 80%; }
 form .edit {
   padding-top: 1em; }
+form label {
+  color: #EEE;
+  font-weight: 500; }
+
+table td {
+  color: #DDD; }
+table th {
+  color: #EEE;
+  font-weight: 500; }
 
 #loginForm {
   background-color: white;
@@ -45,7 +55,7 @@ form .edit {
 
 header {
   width: 15em;
-  background-color: #ddd;
+  background-color: #313131;
   position: fixed;
   height: 100%; }
   header h1 {
@@ -57,9 +67,7 @@ header {
     border-bottom: solid 1px white;
     margin-block-end: 0; }
     header h1 a {
-      color: #333; }
-      header h1 a:hover {
-        color: #333; }
+      color: #ddd; }
   header section figure {
     width: 100%;
     padding: 2em;
@@ -70,7 +78,8 @@ header {
       float: right; }
       header section figure figcaption h2 {
         font-size: medium;
-        padding-right: 1em; }
+        padding-right: 1em;
+        color: #ddd; }
   header nav ul {
     padding-left: 0; }
     header nav ul li {
@@ -78,7 +87,7 @@ header {
       border-bottom: solid 1px white;
       height: 100%; }
       header nav ul li a {
-        color: #333;
+        color: #ddd;
         padding: 15px;
         display: block;
         width: 100%;
