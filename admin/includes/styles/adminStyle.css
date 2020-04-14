@@ -30,7 +30,7 @@ form .edit {
   #loginForm form {
     padding: 1em 2em 4em 2em; }
     #loginForm form h2 {
-      padding-bottom: 1em; }
+      padding-bottom: 0.5em; }
     #loginForm form a {
       float: right; }
     #loginForm form #login {
@@ -38,6 +38,10 @@ form .edit {
       margin-top: 2em; }
     #loginForm form input[type="text"] {
       width: 100%; }
+
+#loginError {
+  display: none;
+  color: red; }
 
 header {
   width: 15em;

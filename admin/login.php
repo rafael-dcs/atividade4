@@ -1,23 +1,5 @@
-<?php
-require_once "functions.php";
-if(session_id() == ""){
-    session_start();
-}
-if(!isset($_SESSION['login'])){
-    if(isset($_POST['login'])){
-        $username = $_POST['user'];
-        $password = $_POST['pass'];
-        $_SESSION['login'] = login($username, $password);
-        if($_SESSION['login'] != null){
-            header('Location: index.php');
-        }
-    }
-}else{
-    header('Location: index.php');
-}
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,10 +7,17 @@ if(!isset($_SESSION['login'])){
     <link rel="stylesheet" href="includes/styles/adminStyle.css" type="text/css">
     <title>Login</title>
 </head>
+
+<?php
+require_once "functions.php";
+sessionControl();
+?>
+
 <body>
     <section id="loginForm">
         <form action="" method="POST">
         <h2>SIGN IN</h2>
+            <span id="loginError">Username or password incorrects</span>
             <div class="form-group">
                 <label for="user">Username</label>
                 <input type="text" name="user" class="form-control" placeholder="Username" required>

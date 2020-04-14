@@ -3,7 +3,6 @@ if(isset($_POST['newProd']) && $_POST['newProd'] !== null){
     newProduct();
 }
 if(isset($_POST['editProd']) && $_POST['editProd'] !== null){
-    echo "AAAAAAAAAAAAAAAAAAAAAAAAA";
     editProduct($_GET['prod']);
 }
 ?>

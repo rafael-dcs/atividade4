@@ -1,5 +1,25 @@
 <?php
 
+function sessionControl(){
+    if(session_id() == ""){
+        session_start();
+    }
+    if(!isset($_SESSION['login'])){
+        if(isset($_POST['login'])){
+            $username = $_POST['user'];
+            $password = $_POST['pass'];
+            $_SESSION['login'] = login($username, $password);
+            if($_SESSION['login'] != null){
+                header('Location: index.php');
+            }else{
+                echo "<style>#loginError{display: block;}</style>";
+            }
+        }
+    }else{
+        header('Location: index.php');
+    }
+}
+
 function login($username, $password){
     $sql = "SELECT users.USERNAME FROM users WHERE users.USERNAME='{$username}' AND users.PASSWORD='{$password}' ";
     $conn = openConnection();
