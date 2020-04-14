@@ -1,6 +1,6 @@
 <?php
 
-function sessionControl(){
+function externalSessionControl(){
     if(session_id() == ""){
         session_start();
     }
@@ -18,6 +18,13 @@ function sessionControl(){
     }else{
         header('Location: index.php');
     }
+}
+
+function internalSessionControl(){
+    if(session_id() == ""){
+        session_start();
+    }
+    if(!isset($_SESSION['login'])) header('Location: login.php');
 }
 
 function login($username, $password){

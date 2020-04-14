@@ -1,3 +1,4 @@
+<?php require_once "functions.php" ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,12 +8,7 @@
     <link rel="stylesheet" href="includes/styles/adminStyle.css" type="text/css">
     <title>Login</title>
 </head>
-
-<?php
-require_once "functions.php";
-sessionControl();
-?>
-
+<?php externalSessionControl(); ?>
 <body>
     <section id="loginForm">
         <form action="" method="POST">

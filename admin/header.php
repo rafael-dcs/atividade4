@@ -1,10 +1,5 @@
-<?php 
-require_once "functions.php";
-if(session_id() == ""){
-    session_start();
-}
-if(!isset($_SESSION['login'])) header('Location: login.php');
-?>
+<?php require_once "functions.php"; ?>
+<?php internalSessionControl(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
