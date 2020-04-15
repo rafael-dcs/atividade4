@@ -8,7 +8,6 @@ body{
     left: 17em;
     top: 1em;
     width: 70%;
-    // border: 1px solid #999;
     box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.31);
     background-color: #313131;
     border-radius: 2px;
@@ -22,11 +21,12 @@ body{
 }
 
 form{
+    margin-left: 4em;
     textarea, input[type="text"]{
         width: 80%;
     }
     .edit{
-        padding-top: 1em;
+        padding: 2em 0;
     }
     label{
         color: #EEE;

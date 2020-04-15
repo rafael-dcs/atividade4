@@ -17,13 +17,15 @@ body {
     padding-bottom: 10px;
     color: #DDD; }
 
-form textarea, form input[type="text"] {
-  width: 80%; }
-form .edit {
-  padding-top: 1em; }
-form label {
-  color: #EEE;
-  font-weight: 500; }
+form {
+  margin-left: 4em; }
+  form textarea, form input[type="text"] {
+    width: 80%; }
+  form .edit {
+    padding: 2em 0; }
+  form label {
+    color: #EEE;
+    font-weight: 500; }
 
 table td {
   color: #DDD; }
