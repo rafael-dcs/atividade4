@@ -8,8 +8,7 @@
         <section class="row products">
             <?php
             $result = getProducts();
-            $count = 0;
-            while($row = $result->fetch_assoc()):
+            while($row = $result->fetch_assoc()){
             ?>
                 <figure class="col-xs-4 shop">
                     <a title="<?php echo $row['NAME'] ?>" href=""><img class="img-responsive" src="includes/img/<?php echo $row['IMAGE'] ?>" alt=""></a>
@@ -19,7 +18,7 @@
                         <a class="overlay" title="Add to my Cart" href="">ADD TO CART</a>
                     </figcaption>
                 </figure>
-            <?php endwhile; ?>
+            <?php } ?>
         </section>
 
         <nav aria-label="Products navigation" class="">
